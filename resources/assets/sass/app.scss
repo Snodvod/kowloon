@@ -1,9 +1,177 @@
-
 // Fonts
 @import url(https://fonts.googleapis.com/css?family=Raleway:300,400,600);
-
 // Variables
 @import "variables";
-
 // Bootstrap
 @import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "csslider";
+@import "webfonts";
+
+$main-bg: #454545;
+$side-bg: #323232;
+
+body {
+  font-family: 'Arial', 'sans-serif';
+}
+
+.page-content-wrapper {
+  width: 100%;
+  padding-left: 45px;
+  background-color: $main-bg;
+  color: white;
+  .container {
+    width: 100%;
+    .index {
+      .slider {
+        padding: 0;
+        .csslider {
+          width: 100%;
+          ul {
+            li {
+              background-size: cover !important;
+            }
+          }
+        }
+      }
+      .info {
+        margin: 2em auto;
+      }
+      .animals {
+        a {
+          color: white;
+        }
+        .col-md-2 {
+          border-right: 1px solid;
+          .text-center {
+            height: 45px;
+            vertical-align: bottom;
+            font-family: Choplin-ExtraLight-DEMO;
+            text-transform: uppercase;
+            font-size: 20px;
+          }
+          .animal {
+            height: 60px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+            margin-bottom: 10px;
+            &.dog {
+              background-image: url(/img/dog.png);
+            }
+            &.cat {
+              background-image: url(/img/cat.png);
+            }
+            &.fish {
+              background-image: url(/img/fish.png);
+            }
+            &.bird {
+              background-image: url(/img/bird.png);
+            }
+            &.hamster {
+              background-image: url(/img/hamster.png);
+            }
+            &.other {
+              background-image: url(/img/hamster);
+            }
+          }
+        }
+      }
+      .hot {
+        h2 {
+          font-family: Choplin-Medium-DEMO;
+          text-transform: uppercase;
+        }
+      }
+    }
+  }
+}
+
+.sidebar {
+  z-index: 555;
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-height: 100vh;
+  width: 45px;
+  background-color: $side-bg;
+  overflow: hidden;
+  transition: width 1s;
+  &.expanded {
+    width: 170px;
+    .kowloon {
+      background-image: url('/img/kowloon.png');
+      width: 180px;
+      background-size: 80%;
+    }
+  }
+  .kowloon {
+    background-image: url(/img/k.png);
+    height: 26px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: 10px;
+    position: fixed;
+    bottom: 10px;
+    width: 40px;
+  }
+  .side-nav {
+    list-style-type: none;
+    padding: 0;
+    width: 170px;
+    li {
+      display: inline-block;
+      cursor: pointer;
+      width: 100%;
+      &.divider-top {
+        padding-bottom: 1em;
+        border-bottom: 1px solid $main-bg;
+      }
+      &.divider-bot {
+        padding-top: 1em;
+      }
+      &.animal {
+        span {
+          color: white;
+          font-weight: bold;
+        }
+      }
+      span {
+        height: 35px;
+        line-height: 35px;
+      }
+      div {
+        background-size: 20px;
+        height: 35px;
+        background-position: 50%;
+        background-repeat: no-repeat;
+        float: left;
+        width: 45px;
+        &.menu {
+          background-image: url('/img/menu.svg');
+          background-color: #252525;
+        }
+        &.search {
+          background-image: url('/img/search.png');
+        }
+        &.faq {
+          background-image: url('/img/faq.png');
+        }
+        &.dog {
+          background-image: url('/img/dog.png');
+        }
+        &.cat {
+          background-image: url('/img/cat.png');
+        }
+        &.bird {
+          background-image: url('/img/bird.png');
+        }
+        &.fish {
+          background-image: url('/img/fish.png');
+        }
+        &.hamster {
+          background-image: url('/img/hamster.png');
+        }
+      }
+    }
+  }
+}
