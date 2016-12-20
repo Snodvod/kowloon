@@ -11,8 +11,8 @@
 <div class="sidebar">
     <ul class="side-nav">
         <li><div id="js-toggle-menu" class="menu"></div></li>
-        <li><div class="search"></div><span>Search</span></li>
-        <li class="divider-top"><div class="faq"></div><span>FAQ</span></li>
+        <li class="top"><div class="search"></div><span>Search</span></li>
+        <li class="top divider-top"><div class="faq"></div><span>FAQ</span></li>
         <li class="animal divider-bot"><div class="dog"></div><span>Dogs</span></li>
         <li class="animal"><div class="cat"></div><span>Cats</span></li>
         <li class="animal"><div class="fish"></div><span>Fish</span></li>

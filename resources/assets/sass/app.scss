@@ -3,7 +3,7 @@
 // Variables
 @import "variables";
 // Bootstrap
-@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+@import "node_modules/bootstrap/scss/bootstrap";
 @import "csslider";
 @import "webfonts";
 
@@ -14,6 +14,14 @@ body {
   font-family: 'Arial', 'sans-serif';
 }
 
+.col-md-12 {
+  padding: 0;
+}
+
+h1, h2, h3 {
+  font-family: Choplin-Medium-DEMO;
+}
+
 .page-content-wrapper {
   width: 100%;
   padding-left: 45px;
@@ -22,6 +30,24 @@ body {
   .container {
     width: 100%;
     .index {
+      .cookie {
+        background-color: #f7eade;
+        height: 170px;
+        color: black;
+        padding-top: 20px;
+        .bone {
+          background-image: url(/img/cookie.png);
+          height: 75px;
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+        .btn {
+          background-color: #ef931f;
+        }
+        h2 {
+          color: #e37e1e;
+        }
+      }
       .slider {
         padding: 0;
         .csslider {
@@ -34,15 +60,20 @@ body {
         }
       }
       .info {
-        margin: 2em auto;
+        margin: 3em auto;
+        font-size: 15px;
       }
       .animals {
+        margin-bottom: 3em;
         a {
           color: white;
         }
         .col-md-2 {
           border-right: 1px solid;
-          .text-center {
+          &.last {
+            border: none;
+          }
+          .text-xs-center {
             height: 45px;
             vertical-align: bottom;
             font-family: Choplin-ExtraLight-DEMO;
@@ -71,15 +102,43 @@ body {
               background-image: url(/img/hamster.png);
             }
             &.other {
-              background-image: url(/img/hamster);
+              background-image: url(/img/hamster.png);
             }
           }
         }
       }
       .hot {
         h2 {
-          font-family: Choplin-Medium-DEMO;
           text-transform: uppercase;
+        }
+        .item {
+          border: 1px solid grey;
+          padding: 5px;
+          .img {
+            background-image: url(/img/hot.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            height: 200px;
+          }
+          .title {
+            float: left;
+            margin-left: 15px;
+            margin-top: 1em;
+          }
+          .price {
+            text-align: right;
+            margin-top: 1em;
+            margin-right: 15px;
+          }
+        }
+        .visit {
+          text-align: right;
+          text-decoration: underline;
+
+          font-family: Choplin-Medium-DEMO;
+          a {
+            color: white;
+          }
         }
       }
     }
@@ -122,6 +181,9 @@ body {
       display: inline-block;
       cursor: pointer;
       width: 100%;
+      &.top {
+        color: #A2A2A2;
+      }
       &.divider-top {
         padding-bottom: 1em;
         border-bottom: 1px solid $main-bg;

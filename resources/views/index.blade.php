@@ -2,6 +2,21 @@
 
 @section('content')
     <div class="index">
+        @if($new)
+            <div class="cookie row">
+                <div class="col-md-12">
+
+                    <div class="col-md-1 offset-md-2">
+                        <div class="bone"></div>
+                    </div>
+                    <div class="col-md-6">
+                        <h2>Cookies</h2>
+                        <p>Hey hallo we gebruiken cookies, accept please!</p>
+                        <button id="js-close-cookie" class="btn">Ok, verder surfen</button>
+                    </div>
+                </div>
+            </div>
+        @endif
         <div class="row">
             <div class="col-md-12 slider">
                 <div class="csslider">
@@ -24,10 +39,10 @@
             </div>
         </div>
         <div class="row">
-            <div class="col-md-offset-1 col-lg-10">
+            <div class="offset-md-1 col-lg-10">
                 <div class="row">
-                    <div class="col-md-10 col-md-offset-1">
-                        <div class="info text-center"><p>Integer vestibulum, lectus nec aliquet consequat, leo tortor
+                    <div class="col-md-10 offset-md-1">
+                        <div class="info text-xs-center"><p>Integer vestibulum, lectus nec aliquet consequat, leo tortor
                                 vestibulum nunc, ac vestibulum tortor nibh facilisis nisl.
                                 Donec dictum ullamcorper nisi, ac mollis purus fermentum non. Cras euismod nisi nulla,
                                 fringilla egestas turpis euismod vitae.
@@ -39,46 +54,73 @@
                     <a href="#">
                         <div class="col-md-2">
                             <div class="animal dog"></div>
-                            <div class="text-center">Dogs</div>
+                            <div class="text-xs-center">Dogs</div>
                         </div>
                     </a>
                     <a href="#">
                         <div class="col-md-2">
                             <div class="animal cat"></div>
-                            <div class="text-center">Cats</div>
+                            <div class="text-xs-center">Cats</div>
                         </div>
                     </a>
                     <a href="#">
                         <div class="col-md-2">
                             <div class="animal fish"></div>
-                            <div class="text-center">Fish</div>
+                            <div class="text-xs-center">Fish</div>
                         </div>
                     </a>
                     <a href="#">
                         <div class="col-md-2">
                             <div class="animal bird"></div>
-                            <div class="text-center">Birds</div>
+                            <div class="text-xs-center">Birds</div>
                         </div>
                     </a>
                     <a href="#">
                         <div class="col-md-2">
                             <div class="animal hamster"></div>
-                            <div style="font-size: 15px;" class="text-center">Small <br>animals</div>
+                            <div style="font-size: 15px;" class="text-xs-center">Small <br>animals</div>
                         </div>
                     </a>
                     <a href="#">
-                        <div class="col-md-2">
+                        <div class="col-md-2 last">
                             <div class="animal other"></div>
-                            <div class="text-center">Other</div>
+                            <div class="text-xs-center">Other</div>
                         </div>
                     </a>
                 </div>
                 <div class="row hot">
                     <h2>Hot items.</h2>
-                    <div class="col-md-3">Hot item 1</div>
-                    <div class="col-md-3">Hot item 1</div>
-                    <div class="col-md-3">Hot item 1</div>
-                    <div class="col-md-3">Hot item 1</div>
+                    <div class="col-md-3">
+                        <div class="item">
+                            <div class="img"></div>
+                            <div class="title">Cooling mat</div>
+                            <div class="price">€91,25</div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="item">
+                            <div class="img"></div>
+                            <div class="title"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="item">
+                            <div class="img"></div>
+                            <div class="title"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-3">
+                        <div class="item">
+                            <div class="img"></div>
+                            <div class="title"></div>
+                            <div class="price"></div>
+                        </div>
+                    </div>
+                    <div class="visit col-md-2 offset-md-10">
+                        <a href="#">Visit the store</a>
+                    </div>
                 </div>
             </div>
         </div>
