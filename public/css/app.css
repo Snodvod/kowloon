@@ -7040,6 +7040,7 @@ h1, h2, h3 {
 .page-content-wrapper .container .index .hot .item {
   border: 1px solid grey;
   padding: 5px;
+  background: #565656;
 }
 
 .page-content-wrapper .container .index .hot .item .img {
@@ -7047,6 +7048,21 @@ h1, h2, h3 {
   background-repeat: no-repeat;
   background-size: cover;
   height: 200px;
+}
+
+.page-content-wrapper .container .index .hot .item .img:hover .overlay {
+  opacity: 1;
+}
+
+.page-content-wrapper .container .index .hot .item .img .overlay {
+  opacity: 0;
+  height: 100%;
+  background: -webkit-linear-gradient(rgba(255, 0, 67, 0.6), rgba(255, 0, 67, 0.6)), url(/img/info.png);
+  background: linear-gradient(rgba(255, 0, 67, 0.6), rgba(255, 0, 67, 0.6)), url(/img/info.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
 }
 
 .page-content-wrapper .container .index .hot .item .title {
@@ -7069,6 +7085,42 @@ h1, h2, h3 {
 
 .page-content-wrapper .container .index .hot .visit a {
   color: white;
+}
+
+.page-content-wrapper .container .index .newsletter {
+  margin-top: 2em;
+  margin-bottom: 100px;
+}
+
+.page-content-wrapper .container .index .newsletter .col-md-5 {
+  padding: 0;
+}
+
+.page-content-wrapper .container .index .newsletter .col-md-7 {
+  padding: 0;
+}
+
+.page-content-wrapper .container .index .newsletter .discover {
+  background-image: url(/img/patroon.jpg);
+  padding: 2em 9em .5em 9em;
+  text-align: center;
+  height: 184px;
+}
+
+.page-content-wrapper .container .index .newsletter .discover h2 {
+  margin-bottom: 1em;
+}
+
+.page-content-wrapper .container .index .newsletter .subscribe {
+  background: #5f5f5f;
+  padding: 2em 7em;
+  height: 184px;
+}
+
+.page-content-wrapper .container .index .newsletter .subscribe input.submit {
+  color: white;
+  background-color: black;
+  border: solid black;
 }
 
 .sidebar {

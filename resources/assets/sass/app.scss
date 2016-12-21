@@ -114,11 +114,25 @@ h1, h2, h3 {
         .item {
           border: 1px solid grey;
           padding: 5px;
+          background: #565656;
           .img {
             background-image: url(/img/hot.jpg);
             background-repeat: no-repeat;
             background-size: cover;
             height: 200px;
+            &:hover {
+              .overlay {
+                opacity: 1;
+              }
+            }
+            .overlay {
+              opacity: 0;
+              height: 100%;
+              background: linear-gradient(rgba(255, 0, 67, 0.6),rgba(255, 0, 67, 0.6)),url(/img/info.png);
+              background-repeat: no-repeat;
+              background-position: 50%;
+              transition: opacity .4s;
+            }
           }
           .title {
             float: left;
@@ -138,6 +152,36 @@ h1, h2, h3 {
           font-family: Choplin-Medium-DEMO;
           a {
             color: white;
+          }
+        }
+      }
+      .newsletter {
+        margin-top: 2em;
+        margin-bottom: 100px;
+        .col-md-5 {
+          padding: 0;
+        }
+        .col-md-7 {
+          padding: 0;
+        }
+        .discover {
+          background-image: url(/img/patroon.jpg);
+          padding: 2em 9em .5em 9em;
+          text-align: center;
+          height: 184px;
+          h2 {
+            margin-bottom: 1em;
+          }
+        }
+        .subscribe {
+          background: #5f5f5f;
+          padding: 2em 7em;
+          height: 184px;
+          input.submit {
+            color: white;
+            background-color: black;
+            border: solid black;
+
           }
         }
       }

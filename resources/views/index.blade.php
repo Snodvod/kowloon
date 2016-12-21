@@ -24,9 +24,9 @@
                     <input type="radio" name="slides" id="slides_2"/>
                     <input type="radio" name="slides" id="slides_3"/>
                     <ul>
-                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/headerdog.png')}}) 50%;"></li>
-                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/bear.jpg')}}) 50%;"></li>
-                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/stokstaart.jpg')}}) 50%;"></li>
+                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/headerdog.png')}});"></li>
+                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/bear.jpg')}});"></li>
+                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/stokstaart.jpg')}});"></li>
                     </ul>
                     <div class="navigation">
                         <div>
@@ -89,37 +89,58 @@
                     </a>
                 </div>
                 <div class="row hot">
-                    <h2>Hot items.</h2>
+                    <div class="col-md-10">
+                        <h2>Hot items.</h2>
+                    </div>
                     <div class="col-md-3">
                         <div class="item">
-                            <div class="img"></div>
+                            <div class="img"><div class="overlay"></div></div>
                             <div class="title">Cooling mat</div>
                             <div class="price">€91,25</div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="item">
-                            <div class="img"></div>
+                            <div class="img"><div class="overlay"></div></div>
                             <div class="title"></div>
                             <div class="price"></div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="item">
-                            <div class="img"></div>
+                            <div class="img"><div class="overlay"></div></div>
                             <div class="title"></div>
                             <div class="price"></div>
                         </div>
                     </div>
                     <div class="col-md-3">
                         <div class="item">
-                            <div class="img"></div>
+                            <div class="img"><div class="overlay"></div></div>
                             <div class="title"></div>
                             <div class="price"></div>
                         </div>
                     </div>
                     <div class="visit col-md-2 offset-md-10">
                         <a href="#">Visit the store</a>
+                    </div>
+                </div>
+                <div class="row newsletter">
+                    <div class="col-md-7">
+                        <div class="discover">
+                            <h2>discover amazing Kowloon deals!</h2>
+                            <p>Only in our newsletter</p>
+                        </div>
+                    </div>
+                    <div class="col-md-5">
+                        <div class="subscribe">
+                            <h5>Subscribe to our newsletter</h5>
+                            <p>And get rekt.</p>
+                            <form action="/user/newsletter" method="POST">
+                                {{csrf_field()}}
+                                <input type="text" name="email" id="email" placeholder="name@domain.com">
+                                <input class="submit" type="submit" value="OK">
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
