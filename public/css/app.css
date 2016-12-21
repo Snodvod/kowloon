@@ -7030,7 +7030,8 @@ h1, h2, h3 {
 }
 
 .page-content-wrapper .container .index .animals .col-md-2 .animal.other {
-  background-image: url(/img/hamster.png);
+  background-image: url(/img/add.svg);
+  background-size: 25%;
 }
 
 .page-content-wrapper .container .index .hot h2 {

@@ -15,6 +15,7 @@ class CreateHotItemsTable extends Migration
     {
         Schema::create('hot_items', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer('product_id');
             $table->timestamps();
         });
     }
