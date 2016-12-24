@@ -15,24 +15,32 @@ class ProductTableSeeder extends Seeder
             'name' => 'Cooling mat',
             'price' => 29.99,
             'image' => 'hot.jpg',
+            'hot' => true,
+            'hot_order' => 1,
             'category_id' => 1
         ]);
         \App\Product::create([
             'name' => 'Prestige snack',
             'image' => 'parkiet.jpg',
             'price' => 1.99,
+            'hot' => true,
+            'hot_order' => 2,
             'category_id' => 4
         ]);
         \App\Product::create([
             'name' => 'Houten lamellenbal',
             'price' => 3.05,
             'image' => 'bal.jpg',
+            'hot' => true,
+            'hot_order' => 3,
             'category_id' => 5
         ]);
         \App\Product::create([
             'name' => 'Juwel Aquarium',
             'price' => 759.99,
             'image' => 'aqua.jpg',
+            'hot' => true,
+            'hot_order' => 4,
             'category_id' => 3
         ]);
         \App\Product::create([

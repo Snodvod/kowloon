@@ -17,7 +17,10 @@ class CreateProductsTable extends Migration
             $table->increments('id');
             $table->string('name');
             $table->double('price');
+            $table->string('image');
             $table->integer('category_id');
+            $table->boolean('hot')->default(false);
+            $table->integer('hot_order')->nullable();
             $table->timestamps();
         });
     }

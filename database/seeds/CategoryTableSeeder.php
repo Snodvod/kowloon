@@ -12,22 +12,28 @@ class CategoryTableSeeder extends Seeder
     public function run()
     {
         \App\Category::create([
-            'name' => 'Dogs'
+            'name' => 'dogs',
+            'image' => 'dog.png'
         ]);
         \App\Category::create([
-            'name' => 'Cats'
+            'name' => 'cats',
+            'image' => 'cat.png'
         ]);
         \App\Category::create([
-            'name' => 'Fish'
+            'name' => 'fish',
+            'image' => 'fish.png'
         ]);
         \App\Category::create([
-            'name' => 'Birds'
+            'name' => 'birds',
+            'image' => 'bird.png'
         ]);
         \App\Category::create([
-            'name' => 'Small Animals'
+            'name' => 'small animals',
+            'image' => 'hamster.png'
         ]);
         \App\Category::create([
-            'name' => 'Other'
+            'name' => 'other',
+            'image' => 'add.svg'
         ]);
     }
 }

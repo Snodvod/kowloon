@@ -24,9 +24,9 @@
                     <input type="radio" name="slides" id="slides_2"/>
                     <input type="radio" name="slides" id="slides_3"/>
                     <ul>
-                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/headerdog.png')}});"></li>
-                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/bear.jpg')}});"></li>
-                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/stokstaart.jpg')}});"></li>
+                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/headerdog.png')}}) 50%;"></li>
+                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/bear.jpg')}}) 50%;"></li>
+                        <li style="background:linear-gradient(rgba(255, 0, 67, 0.45),rgba(255, 0, 67, 0.45)),url({{asset('img/stokstaart.jpg')}}) 50%;"></li>
                     </ul>
                     <div class="navigation">
                         <div>
@@ -51,75 +51,30 @@
                     </div>
                 </div>
                 <div class="row animals">
-                    <a href="#">
-                        <div class="col-md-2">
-                            <div class="animal dog"></div>
-                            <div class="text-xs-center">Dogs</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="col-md-2">
-                            <div class="animal cat"></div>
-                            <div class="text-xs-center">Cats</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="col-md-2">
-                            <div class="animal fish"></div>
-                            <div class="text-xs-center">Fish</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="col-md-2">
-                            <div class="animal bird"></div>
-                            <div class="text-xs-center">Birds</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="col-md-2">
-                            <div class="animal hamster"></div>
-                            <div style="font-size: 15px;" class="text-xs-center">Small <br>animals</div>
-                        </div>
-                    </a>
-                    <a href="#">
-                        <div class="col-md-2 last">
-                            <div class="animal other"></div>
-                            <div class="text-xs-center">Other</div>
-                        </div>
-                    </a>
+                    @foreach($categories as $category)
+                        <a href="">
+                            <div class="col-md-2">
+                                <div class="cat{{$category->id}} animal" style="background-image: url({{asset('img/' . $category->image)}})"></div>
+                                <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
+                            </div>
+                        </a>
+                    @endforeach
                 </div>
                 <div class="row hot">
                     <div class="col-md-10">
                         <h2>Hot items.</h2>
                     </div>
-                    <div class="col-md-3">
-                        <div class="item">
-                            <div class="img"><div class="overlay"></div></div>
-                            <div class="title">Cooling mat</div>
-                            <div class="price">€91,25</div>
+                    @foreach($hotItems as $item)
+                        <div class="col-md-3">
+                            <div class="item">
+                                <div class="img" style="background-image: url({{asset('img/' . $item->image)}})">
+                                    <div class="overlay"></div>
+                                </div>
+                                <div class="title">{{$item->name}}</div>
+                                <div class="price">{{$item->price}}</div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item">
-                            <div class="img"><div class="overlay"></div></div>
-                            <div class="title"></div>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item">
-                            <div class="img"><div class="overlay"></div></div>
-                            <div class="title"></div>
-                            <div class="price"></div>
-                        </div>
-                    </div>
-                    <div class="col-md-3">
-                        <div class="item">
-                            <div class="img"><div class="overlay"></div></div>
-                            <div class="title"></div>
-                            <div class="price"></div>
-                        </div>
-                    </div>
+                    @endforeach
                     <div class="visit col-md-2 offset-md-10">
                         <a href="#">Visit the store</a>
                     </div>

@@ -64,11 +64,11 @@ h1, h2, h3 {
         font-size: 15px;
       }
       .animals {
-        margin-bottom: 3em;
         a {
           color: white;
         }
         .col-md-2 {
+          margin-bottom: 3em;
           border-right: 1px solid;
           &.last {
             border: none;
@@ -79,6 +79,10 @@ h1, h2, h3 {
             font-family: Choplin-ExtraLight-DEMO;
             text-transform: uppercase;
             font-size: 20px;
+            &.cat5 {
+              font-size: 15px;
+              padding: 0 2em;
+            }
           }
           .animal {
             height: 60px;
@@ -86,23 +90,7 @@ h1, h2, h3 {
             background-repeat: no-repeat;
             background-position: 50%;
             margin-bottom: 10px;
-            &.dog {
-              background-image: url(/img/dog.png);
-            }
-            &.cat {
-              background-image: url(/img/cat.png);
-            }
-            &.fish {
-              background-image: url(/img/fish.png);
-            }
-            &.bird {
-              background-image: url(/img/bird.png);
-            }
-            &.hamster {
-              background-image: url(/img/hamster.png);
-            }
-            &.other {
-              background-image: url(/img/add.svg);
+            &.cat6 {
               background-size: 25%;
             }
           }

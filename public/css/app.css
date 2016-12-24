@@ -6977,15 +6977,12 @@ h1, h2, h3 {
   font-size: 15px;
 }
 
-.page-content-wrapper .container .index .animals {
-  margin-bottom: 3em;
-}
-
 .page-content-wrapper .container .index .animals a {
   color: white;
 }
 
 .page-content-wrapper .container .index .animals .col-md-2 {
+  margin-bottom: 3em;
   border-right: 1px solid;
 }
 
@@ -7001,6 +6998,11 @@ h1, h2, h3 {
   font-size: 20px;
 }
 
+.page-content-wrapper .container .index .animals .col-md-2 .text-xs-center.cat5 {
+  font-size: 15px;
+  padding: 0 2em;
+}
+
 .page-content-wrapper .container .index .animals .col-md-2 .animal {
   height: 60px;
   background-size: contain;
@@ -7009,28 +7011,7 @@ h1, h2, h3 {
   margin-bottom: 10px;
 }
 
-.page-content-wrapper .container .index .animals .col-md-2 .animal.dog {
-  background-image: url(/img/dog.png);
-}
-
-.page-content-wrapper .container .index .animals .col-md-2 .animal.cat {
-  background-image: url(/img/cat.png);
-}
-
-.page-content-wrapper .container .index .animals .col-md-2 .animal.fish {
-  background-image: url(/img/fish.png);
-}
-
-.page-content-wrapper .container .index .animals .col-md-2 .animal.bird {
-  background-image: url(/img/bird.png);
-}
-
-.page-content-wrapper .container .index .animals .col-md-2 .animal.hamster {
-  background-image: url(/img/hamster.png);
-}
-
-.page-content-wrapper .container .index .animals .col-md-2 .animal.other {
-  background-image: url(/img/add.svg);
+.page-content-wrapper .container .index .animals .col-md-2 .animal.cat6 {
   background-size: 25%;
 }
 
