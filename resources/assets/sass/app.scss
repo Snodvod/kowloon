@@ -9,6 +9,7 @@
 
 $main-bg: #454545;
 $side-bg: #323232;
+$text-orange: #e27500;
 
 body {
   font-family: 'Arial', 'sans-serif';
@@ -30,6 +31,61 @@ h1, h2, h3 {
   .container {
     width: 100%;
     .index {
+      .overlay {
+        display: none;
+        > .row {
+          padding: 1em 0;
+          color: black;
+          position: fixed;
+          z-index: 9999;
+          height: 100vh;
+          left: 45px;
+          margin: 0;
+          width: 98%;
+          top: 0;
+          background-color: rgba(255, 255, 255, .9);
+          .exit {
+            cursor: pointer;
+            .icon-close {
+              background-image: url(/img/close.svg);
+              height: 20px;
+              background-size: contain;
+              background-repeat: no-repeat;
+              background-position: 50%;
+            }
+          }
+          a {
+            color: black;
+          }
+          .typeahead {
+            .form-group, .form-control, .twitter-typeahead {
+              width: 100%;
+            }
+            .tt-menu {
+              width: 100%;
+              .tt-dataset-results {
+                .image {
+                  height: 200px;
+                  width: 200px;
+                  background-size: cover;
+                  float: left;
+                }
+              }
+            }
+            .search-input {
+              border: none;
+              background: transparent;
+              border-radius: 0;
+              border-bottom: 2px solid black;
+              font-size: 2em;
+              color: $text-orange;
+              &::-webkit-input-placeholder {
+                color: $text-orange;
+              }
+            }
+          }
+        }
+      }
       .cookie {
         background-color: #f7eade;
         height: 170px;
@@ -117,7 +173,7 @@ h1, h2, h3 {
             .overlay {
               opacity: 0;
               height: 100%;
-              background: linear-gradient(rgba(255, 0, 67, 0.6),rgba(255, 0, 67, 0.6)),url(/img/info.png);
+              background: linear-gradient(rgba(255, 0, 67, 0.6), rgba(255, 0, 67, 0.6)), url(/img/info.png);
               background-repeat: no-repeat;
               background-position: 50%;
               transition: opacity .4s;

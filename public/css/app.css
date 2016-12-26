@@ -6938,6 +6938,67 @@ h1, h2, h3 {
   width: 100%;
 }
 
+.page-content-wrapper .container .index .overlay {
+  display: none;
+}
+
+.page-content-wrapper .container .index .overlay > .row {
+  padding: 1em 0;
+  color: black;
+  position: fixed;
+  z-index: 9999;
+  height: 100vh;
+  left: 45px;
+  margin: 0;
+  width: 98%;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.page-content-wrapper .container .index .overlay > .row .exit {
+  cursor: pointer;
+}
+
+.page-content-wrapper .container .index .overlay > .row .exit .icon-close {
+  background-image: url(/img/close.svg);
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: 50%;
+}
+
+.page-content-wrapper .container .index .overlay > .row a {
+  color: black;
+}
+
+.page-content-wrapper .container .index .overlay > .row .typeahead .form-group, .page-content-wrapper .container .index .overlay > .row .typeahead .form-control, .page-content-wrapper .container .index .overlay > .row .typeahead .twitter-typeahead {
+  width: 100%;
+}
+
+.page-content-wrapper .container .index .overlay > .row .typeahead .tt-menu {
+  width: 100%;
+}
+
+.page-content-wrapper .container .index .overlay > .row .typeahead .tt-menu .tt-dataset-results .image {
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  float: left;
+}
+
+.page-content-wrapper .container .index .overlay > .row .typeahead .search-input {
+  border: none;
+  background: transparent;
+  border-radius: 0;
+  border-bottom: 2px solid black;
+  font-size: 2em;
+  color: #e27500;
+}
+
+.page-content-wrapper .container .index .overlay > .row .typeahead .search-input::-webkit-input-placeholder {
+  color: #e27500;
+}
+
 .page-content-wrapper .container .index .cookie {
   background-color: #f7eade;
   height: 170px;

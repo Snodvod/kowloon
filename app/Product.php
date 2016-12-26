@@ -12,4 +12,8 @@ class Product extends Model
     {
         return $this->belongsTo('App\Category');
     }
+
+    protected function search($query) {
+        return self::where('name', 'LIKE', '%' . $query . '%')->get();
+    }
 }

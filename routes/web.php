@@ -14,3 +14,5 @@
 Route::get('/', 'HomeController@index');
 
 Route::post('user/newsletter', 'UserController@newsletter');
+
+Route::get('search', 'ProductController@search');

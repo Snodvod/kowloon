@@ -2,6 +2,43 @@
 
 @section('content')
     <div class="index">
+        <div id="search" class="overlay hidden">
+            <div class="row">
+                <div class="col-md-11 offset-md-1">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="#"><h4>Advanced search <i class="fa fa-caret-right" aria-hidden="true"></i></h4>
+                            </a>
+                        </div>
+                        <div id="js-close-search" class="exit col-md-1 offset-md-8 text-xs-center">
+                            <div class="icon-close"></div>
+                            <p>esc</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-11">
+                            <form role="search" class="typeahead">
+                                <div class="form-group">
+                                    <input type="search" class="form-control search-input" autofocus
+                                           id="js-search-input" name="q" placeholder="Just start typing to search"
+                                           autocomplete="off">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="overlay hidden" id="faq">
+            <div class="row">
+                <div id="js-close-faq" class="text-xs-center exit col-md-1 offset-md-11">
+                    <div class="icon-close"></div>
+                    <p>esc</p>
+                </div>
+            </div>
+        </div>
         @if($new)
             <div class="cookie row">
                 <div class="col-md-12">
@@ -52,12 +89,24 @@
                 </div>
                 <div class="row animals">
                     @foreach($categories as $category)
-                        <a href="">
-                            <div class="col-md-2">
-                                <div class="cat{{$category->id}} animal" style="background-image: url({{asset('img/' . $category->image)}})"></div>
-                                <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
+                        @if($category->id == 6)
+                            <div class="col-md-2" style="border: none;">
+                                <a href="">
+                                    <div class="cat{{$category->id}} animal"
+                                         style="background-image: url({{asset('img/' . $category->image)}})"></div>
+                                    <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
+                                </a>
                             </div>
-                        </a>
+                        @else
+                            <div class="col-md-2">
+                                <a href="">
+                                    <div class="cat{{$category->id}} animal"
+                                         style="background-image: url({{asset('img/' . $category->image)}})"></div>
+                                    <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
+                                </a>
+                            </div>
+                        @endif
+
                     @endforeach
                 </div>
                 <div class="row hot">
