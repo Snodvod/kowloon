@@ -16,3 +16,11 @@ Route::get('/', 'HomeController@index');
 Route::post('user/newsletter', 'UserController@newsletter');
 
 Route::get('search', 'ProductController@search');
+
+Route::group(['middleware' => 'auth'], function() {
+    Route::group(['prefix' => 'admin'], function() {
+       Route::get('/', 'UserController@admin');
+    });
+});
+
+Auth::routes();

@@ -7123,6 +7123,7 @@ h1, h2, h3 {
 .page-content-wrapper .container .index .hot .visit {
   text-align: right;
   text-decoration: underline;
+  margin-top: 2em;
   font-family: Choplin-Medium-DEMO;
 }
 

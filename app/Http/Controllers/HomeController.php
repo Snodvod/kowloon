@@ -9,6 +9,12 @@ use Illuminate\Support\Facades\Cookie;
 
 class HomeController extends Controller
 {
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
     public function index(Request $request)
     {
         $cookie = $request->cookie('new');
@@ -23,4 +29,5 @@ class HomeController extends Controller
         }
         return view('index', ['new' => $new, 'hotItems' => $hotItems, 'categories' => $categories]);
     }
+
 }
