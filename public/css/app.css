@@ -6938,28 +6938,67 @@ h1, h2, h3 {
   width: 100%;
 }
 
-.page-content-wrapper .container .index .overlay {
+.page-content-wrapper .container .overlay {
   display: none;
 }
 
-.page-content-wrapper .container .index .overlay > .row {
+.page-content-wrapper .container .overlay > .row {
+  overflow: scroll;
   padding: 1em 0;
   color: black;
   position: fixed;
-  z-index: 9999;
+  z-index: 999;
   height: 100vh;
   left: 45px;
   margin: 0;
   width: 98%;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.9);
+  background-color: white;
 }
 
-.page-content-wrapper .container .index .overlay > .row .exit {
+.page-content-wrapper .container .overlay > .row .advanced {
   cursor: pointer;
 }
 
-.page-content-wrapper .container .index .overlay > .row .exit .icon-close {
+.page-content-wrapper .container .overlay > .row .search-block {
+  margin-top: 3em;
+}
+
+.page-content-wrapper .container .overlay > .row .filters {
+  display: none;
+  margin-bottom: 4em;
+}
+
+.page-content-wrapper .container .overlay > .row .filters .price .slider .ui-slider-handle {
+  background: #636363;
+}
+
+.page-content-wrapper .container .overlay > .row .filters .price .slider .ui-corner-all {
+  border-radius: 50px;
+}
+
+.page-content-wrapper .container .overlay > .row .filters .price .row {
+  margin: 1em 0;
+}
+
+.page-content-wrapper .container .overlay > .row .filters .price .row .text-xs-center {
+  padding: .5em;
+}
+
+.page-content-wrapper .container .overlay > .row .filters .price .row .min, .page-content-wrapper .container .overlay > .row .filters .price .row .max {
+  border: 1px solid black;
+  padding: .5em 1em;
+}
+
+.page-content-wrapper .container .overlay > .row .filters .price .row .min .euro, .page-content-wrapper .container .overlay > .row .filters .price .row .max .euro {
+  margin-right: 4em;
+}
+
+.page-content-wrapper .container .overlay > .row .exit {
+  cursor: pointer;
+}
+
+.page-content-wrapper .container .overlay > .row .exit .icon-close {
   background-image: url(/img/close.svg);
   height: 20px;
   background-size: contain;
@@ -6967,26 +7006,28 @@ h1, h2, h3 {
   background-position: 50%;
 }
 
-.page-content-wrapper .container .index .overlay > .row a {
+.page-content-wrapper .container .overlay > .row a {
   color: black;
 }
 
-.page-content-wrapper .container .index .overlay > .row .typeahead .form-group, .page-content-wrapper .container .index .overlay > .row .typeahead .form-control, .page-content-wrapper .container .index .overlay > .row .typeahead .twitter-typeahead {
+.page-content-wrapper .container .overlay > .row .typeahead .form-group, .page-content-wrapper .container .overlay > .row .typeahead .form-control, .page-content-wrapper .container .overlay > .row .typeahead .twitter-typeahead {
   width: 100%;
 }
 
-.page-content-wrapper .container .index .overlay > .row .typeahead .tt-menu {
+.page-content-wrapper .container .overlay > .row .typeahead .tt-menu {
   width: 100%;
+  position: relative;
+  margin-top: 1em;
 }
 
-.page-content-wrapper .container .index .overlay > .row .typeahead .tt-menu .tt-dataset-results .image {
+.page-content-wrapper .container .overlay > .row .typeahead .tt-menu .tt-dataset-results .image {
   height: 200px;
   width: 200px;
   background-size: cover;
   float: left;
 }
 
-.page-content-wrapper .container .index .overlay > .row .typeahead .search-input {
+.page-content-wrapper .container .overlay > .row .typeahead .search-input {
   border: none;
   background: transparent;
   border-radius: 0;
@@ -6995,8 +7036,17 @@ h1, h2, h3 {
   color: #e27500;
 }
 
-.page-content-wrapper .container .index .overlay > .row .typeahead .search-input::-webkit-input-placeholder {
+.page-content-wrapper .container .overlay > .row .typeahead .search-input::-webkit-input-placeholder {
   color: #e27500;
+}
+
+.page-content-wrapper .container .overlay > .row .faq-head {
+  margin-bottom: 2em;
+  color: #e27500;
+}
+
+.page-content-wrapper .container .index.no-scroll {
+  position: fixed;
 }
 
 .page-content-wrapper .container .index .cookie {
@@ -7168,7 +7218,7 @@ h1, h2, h3 {
 }
 
 .sidebar {
-  z-index: 555;
+  z-index: 1000;
   position: fixed;
   left: 0;
   top: 0;

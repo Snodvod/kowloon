@@ -1,44 +1,97 @@
 @extends('master')
 
 @section('content')
-    <div class="index">
-        <div id="search" class="overlay hidden">
-            <div class="row">
-                <div class="col-md-11 offset-md-1">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <a href="#"><h4>Advanced search <i class="fa fa-caret-right" aria-hidden="true"></i></h4>
-                            </a>
-                        </div>
-                        <div id="js-close-search" class="exit col-md-1 offset-md-8 text-xs-center">
-                            <div class="icon-close"></div>
-                            <p>esc</p>
+    <div id="search" class="overlay hidden">
+        <div class="row">
+            <div class="col-md-11 offset-md-1">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="advanced" id="js-toggle-filters">
+                            <h4>Advanced search <i class="fa fa-caret-right" aria-hidden="true"></i></h4>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-md-11">
-                            <form role="search" class="typeahead">
-                                <div class="form-group">
-                                    <input type="search" class="form-control search-input" autofocus
-                                           id="js-search-input" name="q" placeholder="Just start typing to search"
-                                           autocomplete="off">
+                    <div id="js-close-search" class="exit col-md-1 offset-md-8 text-xs-center">
+                        <div class="icon-close"></div>
+                        <p>esc</p>
+                    </div>
+                </div>
+                <div class="filters row">
+                    <div class="col-md-6 category">
+                        <h5>Category</h5>
+                        @foreach($categories as $category)
+                            <label class="custom-control custom-checkbox">
+                                <input type="checkbox" name="" id="{{$category->id}}"
+                                       class="custom-control-input js-cats">
+                                <span class="custom-control-indicator"></span>
+                                <span class="custom-control-description">{{$category->name}}</span>
+                            </label>
+                        @endforeach
+                    </div>
+                    <div class="col-md-5 price">
+                        <h5>Price range</h5>
+                        <div class="slider" id="js-slider"></div>
+                        <div class="row">
+                            <div class="col-md-4 min"><span class="euro">€</span> <span id="js-min">1</span></div>
+                            <div class="col-md-4 text-xs-center">-</div>
+                            <div class="col-md-4 max"><span class="euro">€</span> <span id="js-max">9999</span>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="row search-block">
+                    <div class="col-md-11">
+                        <form role="search" class="typeahead">
+                            <div class="form-group">
+                                <input type="search" class="form-control search-input" autofocus
+                                       id="js-search-input" name="q" placeholder="Just start typing to search"
+                                       autocomplete="off">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="overlay hidden" id="faq">
+        <div class="row">
+            <div class="col-md-11 offset-md-1">
+                <div class="row">
+                    <div id="js-close-faq" class="text-xs-center exit offset-md-11 col-md-1">
+                        <div class="icon-close"></div>
+                        <p>esc</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-10 faq-head"><h1>Frequently Asked Questions</h1></div>
+                </div>
+                <div class="row">
+                    <div class="col-md-11">
+                        <form role="search" class="typeahead">
+                            <div class="form-group">
+                                <input type="search" class="form-control faq-search search-input" autofocus
+                                       id="js-search-input" name="q" placeholder="Search on keyword"
+                                       autocomplete="off">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="faq-static">
+                    @foreach($faqs as $faq)
+                        <div class="row">
+                            <div class="col-md-11">
+                                <div class="card card-block">
+                                    <h4 class="card-title">{{$faq->question}}</h4>
+                                    <p class="card-text">{{$faq->answer}}</p>
                                 </div>
-                            </form>
+                            </div>
                         </div>
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-        <div class="overlay hidden" id="faq">
-            <div class="row">
-                <div id="js-close-faq" class="text-xs-center exit col-md-1 offset-md-11">
-                    <div class="icon-close"></div>
-                    <p>esc</p>
+                    @endforeach
                 </div>
             </div>
         </div>
+    </div>
+    <div class="index">
         @if($new)
             <div class="cookie row">
                 <div class="col-md-12">
@@ -91,19 +144,15 @@
                     @foreach($categories as $category)
                         @if($category->id == 6)
                             <div class="col-md-2" style="border: none;">
-                                <a href="">
-                                    <div class="cat{{$category->id}} animal"
-                                         style="background-image: url({{asset('img/' . $category->image)}})"></div>
-                                    <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
-                                </a>
+                                <div class="cat{{$category->id}} animal"
+                                     style="background-image: url({{asset('img/' . $category->image)}})"></div>
+                                <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
                             </div>
                         @else
                             <div class="col-md-2">
-                                <a href="">
-                                    <div class="cat{{$category->id}} animal"
-                                         style="background-image: url({{asset('img/' . $category->image)}})"></div>
-                                    <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
-                                </a>
+                                <div class="cat{{$category->id}} animal"
+                                     style="background-image: url({{asset('img/' . $category->image)}})"></div>
+                                <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
                             </div>
                         @endif
 

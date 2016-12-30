@@ -30,61 +30,105 @@ h1, h2, h3 {
   color: white;
   .container {
     width: 100%;
-    .index {
-      .overlay {
-        display: none;
-        > .row {
-          padding: 1em 0;
-          color: black;
-          position: fixed;
-          z-index: 9999;
-          height: 100vh;
-          left: 45px;
-          margin: 0;
-          width: 98%;
-          top: 0;
-          background-color: rgba(255, 255, 255, .9);
-          .exit {
-            cursor: pointer;
-            .icon-close {
-              background-image: url(/img/close.svg);
-              height: 20px;
-              background-size: contain;
-              background-repeat: no-repeat;
-              background-position: 50%;
-            }
-          }
-          a {
-            color: black;
-          }
-          .typeahead {
-            .form-group, .form-control, .twitter-typeahead {
-              width: 100%;
-            }
-            .tt-menu {
-              width: 100%;
-              .tt-dataset-results {
-                .image {
-                  height: 200px;
-                  width: 200px;
-                  background-size: cover;
-                  float: left;
-                }
+    .overlay {
+      display: none;
+      > .row {
+        overflow: scroll;
+        padding: 1em 0;
+        color: black;
+        position: fixed;
+        z-index: 999;
+        height: 100vh;
+        left: 45px;
+        margin: 0;
+        width: 98%;
+        top: 0;
+        background-color: rgb(255, 255, 255);
+        .advanced {
+          cursor: pointer;
+        }
+        .search-block {
+          margin-top: 3em;
+        }
+        .filters {
+          display: none;
+          margin-bottom: 4em;
+          .price {
+            .slider {
+              .ui-slider-handle {
+                background: #636363;
+              }
+              .ui-corner-all {
+                border-radius: 50px;
               }
             }
-            .search-input {
-              border: none;
-              background: transparent;
-              border-radius: 0;
-              border-bottom: 2px solid black;
-              font-size: 2em;
-              color: $text-orange;
-              &::-webkit-input-placeholder {
-                color: $text-orange;
+            .row {
+              margin: 1em 0;
+              .text-xs-center {
+                padding: .5em;
+              }
+              .min, .max {
+                border: 1px solid black;
+                padding: .5em 1em;
+                .euro {
+                  margin-right: 4em;
+                }
               }
             }
           }
         }
+        .exit {
+          cursor: pointer;
+          .icon-close {
+            background-image: url(/img/close.svg);
+            height: 20px;
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: 50%;
+          }
+        }
+        a {
+          color: black;
+        }
+        .typeahead {
+          .form-group, .form-control, .twitter-typeahead {
+            width: 100%;
+          }
+          .tt-menu {
+            width: 100%;
+            //display: block !important ;
+            position: relative;
+            margin-top: 1em;
+            .tt-dataset-results {
+              .image {
+                height: 200px;
+                width: 200px;
+                background-size: cover;
+                float: left;
+              }
+            }
+          }
+          .search-input {
+            border: none;
+            background: transparent;
+            border-radius: 0;
+            border-bottom: 2px solid black;
+            font-size: 2em;
+            color: $text-orange;
+            &::-webkit-input-placeholder {
+              color: $text-orange;
+            }
+          }
+        }
+        .faq-head {
+          margin-bottom:2em;
+          color: $text-orange;
+        }
+      }
+    }
+    .index {
+      &.no-scroll {
+        position: fixed;
       }
       .cookie {
         background-color: #f7eade;
@@ -235,7 +279,7 @@ h1, h2, h3 {
 }
 
 .sidebar {
-  z-index: 555;
+  z-index: 1000;
   position: fixed;
   left: 0;
   top: 0;

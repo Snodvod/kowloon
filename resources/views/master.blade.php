@@ -6,6 +6,9 @@
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
     <script src="{{asset('js/app.js')}}"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
+    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
     <script src="https://use.fontawesome.com/cbad98e1c7.js"></script>
 </head>
 <body>
@@ -20,7 +23,7 @@
         <li class="animal"><div class="bird"></div><span>Birds</span></li>
         <li class="animal"><div class="hamster"></div><span>Small Animals</span></li>
     </ul>
-    <div class="kowloon"></div>
+    <a href="/" class="kowloon"></a>
 </div>
 <div class="page-content-wrapper">
     <div class="page-content">
