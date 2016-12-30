@@ -15,12 +15,14 @@ Route::get('/', 'HomeController@index');
 
 Route::post('user/newsletter', 'UserController@newsletter');
 
-Route::get('search', 'ProductController@search');
+Route::get('search', 'SearchController@searchIndex');
 
 Route::group(['middleware' => 'auth'], function() {
     Route::group(['prefix' => 'admin'], function() {
        Route::get('/', 'UserController@admin');
     });
 });
+
+Route::resource('products', 'ProductController');
 
 Auth::routes();
