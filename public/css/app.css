@@ -6919,8 +6919,49 @@ body {
   font-family: 'Arial', 'sans-serif';
 }
 
+p {
+  font-size: 14px;
+}
+
 h1, h2, h3 {
   font-family: Choplin-Medium-DEMO;
+  text-transform: uppercase;
+}
+
+.newsletter {
+  margin-top: 2em;
+  margin-bottom: 100px;
+}
+
+.newsletter .col-md-5 {
+  padding-left: 0;
+}
+
+.newsletter .col-md-7 {
+  padding-right: 0;
+}
+
+.newsletter .discover {
+  background-image: url(/img/patroon.jpg);
+  padding: 2em 9em .5em 9em;
+  text-align: center;
+  height: 184px;
+}
+
+.newsletter .discover h2 {
+  margin-bottom: 1em;
+}
+
+.newsletter .subscribe {
+  background: #5f5f5f;
+  padding: 2em 7em;
+  height: 184px;
+}
+
+.newsletter .subscribe input.submit {
+  color: white;
+  background-color: black;
+  border: solid black;
 }
 
 .page-content-wrapper {
@@ -7133,10 +7174,6 @@ h1, h2, h3 {
   background-size: 25%;
 }
 
-.page-content-wrapper .container .index .hot h2 {
-  text-transform: uppercase;
-}
-
 .page-content-wrapper .container .index .hot .item {
   border: 1px solid grey;
   padding: 5px;
@@ -7196,47 +7233,15 @@ h1, h2, h3 {
   color: white;
 }
 
-.page-content-wrapper .container .index .newsletter {
-  margin-top: 2em;
-  margin-bottom: 100px;
-}
-
-.page-content-wrapper .container .index .newsletter .col-md-5 {
-  padding: 0;
-}
-
-.page-content-wrapper .container .index .newsletter .col-md-7 {
-  padding: 0;
-}
-
-.page-content-wrapper .container .index .newsletter .discover {
-  background-image: url(/img/patroon.jpg);
-  padding: 2em 9em .5em 9em;
-  text-align: center;
-  height: 184px;
-}
-
-.page-content-wrapper .container .index .newsletter .discover h2 {
-  margin-bottom: 1em;
-}
-
-.page-content-wrapper .container .index .newsletter .subscribe {
-  background: #5f5f5f;
-  padding: 2em 7em;
-  height: 184px;
-}
-
-.page-content-wrapper .container .index .newsletter .subscribe input.submit {
-  color: white;
-  background-color: black;
-  border: solid black;
-}
-
 .page-content-wrapper .container .product-detail .logo {
   background: url("/img/kowloon-logo.png") no-repeat;
   background-size: 45%;
   height: 135px;
   background-position: 50%;
+}
+
+.page-content-wrapper .container .product-detail .info {
+  margin-bottom: 2em;
 }
 
 .page-content-wrapper .container .product-detail .info .images .big {
@@ -7258,6 +7263,10 @@ h1, h2, h3 {
   height: 450px;
 }
 
+.page-content-wrapper .container .product-detail .info .text .breadcrumbs {
+  margin-bottom: 1em;
+}
+
 .page-content-wrapper .container .product-detail .info .text .breadcrumbs .logo {
   background-image: url("/img/k.png");
   height: 1.5em;
@@ -7275,7 +7284,22 @@ h1, h2, h3 {
 }
 
 .page-content-wrapper .container .product-detail .info .text h2 {
-  text-transform: uppercase;
+  margin-bottom: .5em;
+}
+
+.page-content-wrapper .container .product-detail .specs {
+  margin-bottom: 2em;
+}
+
+.page-content-wrapper .container .product-detail .specs .text {
+  border: 3px solid #535353;
+  padding: 1em 2em;
+}
+
+.page-content-wrapper .container .product-detail .faq .question {
+  background-color: #717171;
+  padding: 1em;
+  margin-bottom: 1em;
 }
 
 .sidebar {
@@ -7335,6 +7359,26 @@ h1, h2, h3 {
 
 .sidebar .side-nav li.divider-bot {
   padding-top: 1em;
+}
+
+.sidebar .side-nav li.animal:hover .dog {
+  background-image: url("/img/dog-w.png");
+}
+
+.sidebar .side-nav li.animal:hover .cat {
+  background-image: url("/img/cat-w.png");
+}
+
+.sidebar .side-nav li.animal:hover .bird {
+  background-image: url("/img/bird-w.png");
+}
+
+.sidebar .side-nav li.animal:hover .fish {
+  background-image: url("/img/fish-w.png");
+}
+
+.sidebar .side-nav li.animal:hover .hamster {
+  background-image: url("/img/hamster-w.png");
 }
 
 .sidebar .side-nav li.animal span {

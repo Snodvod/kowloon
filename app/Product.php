@@ -29,8 +29,12 @@ class Product extends Model
         return $this->hasMany('App\Image');
     }
 
-    protected function search($query, $min, $max, $cats=[1,2,3,4,5,6]) {
-        return DB::table('products')->where('name', 'LIKE', '%' . $query . '%')
+    protected function search($query, $min, $max, $cats = [1, 2, 3, 4, 5, 6])
+    {
+        return DB::table('products')
+            ->select('products.*', 'images.image')
+            ->join('images', 'images.product_id', '=', 'products.id')
+            ->where('name', 'LIKE', '%' . $query . '%')
             ->whereBetween('price', [$min, $max])
             ->whereIn('category_id', $cats)
             ->get();

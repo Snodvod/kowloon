@@ -93,7 +93,6 @@ $(document).ready(function () {
                 '<div class="list-group search-results-dropdown">'
             ],
             suggestion: function (data) {
-                console.log(data)
                 if (data.image) {
                     return '<div class="result row"><a href="/products/' + data.id + '"><div class="col-md-3"><div style="background-image: url(/img/' + data.image + ');" class="image"></div></div><div class="col-md-9 name">' + data.name + '</div></a></div>'
                 } else {

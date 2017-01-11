@@ -37,6 +37,44 @@
                         </div>
                     </div>
                 </div>
+                <div class="row specs">
+                    <div class="col-md-12">
+                        <div class="text">
+                            <h5>Specifications</h5>
+                            <h6>DIMENSIONS</h6>
+                            <ul>bla bla</ul>
+                            <h6>DETAILS</h6>
+                            <p>Blabla</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="related">
+                    <h3>Gerelateerde producten</h3>
+                    <div class="row">
+                        <div class="col-md-3">
+                            <a href="">
+                                <div class="image">Amazing image</div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="faq">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="question">
+                                Dit is een vraag
+                                <i class="fa fa-caret-right pull-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="question">
+                                Dit is een vraag
+                                <i class="fa fa-caret-right pull-right" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                @include('partials.footer')
             </div>
         </div>
 @endsection

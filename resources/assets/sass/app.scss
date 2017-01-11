@@ -15,8 +15,44 @@ body {
   font-family: 'Arial', 'sans-serif';
 }
 
+p {
+  font-size: 14px;
+}
+
 h1, h2, h3 {
   font-family: Choplin-Medium-DEMO;
+  text-transform: uppercase;
+}
+
+.newsletter {
+  margin-top: 2em;
+  margin-bottom: 100px;
+  .col-md-5 {
+    padding-left: 0;
+  }
+  .col-md-7 {
+    padding-right: 0;
+  }
+  .discover {
+    background-image: url(/img/patroon.jpg);
+    padding: 2em 9em .5em 9em;
+    text-align: center;
+    height: 184px;
+    h2 {
+      margin-bottom: 1em;
+    }
+  }
+  .subscribe {
+    background: #5f5f5f;
+    padding: 2em 7em;
+    height: 184px;
+    input.submit {
+      color: white;
+      background-color: black;
+      border: solid black;
+
+    }
+  }
 }
 
 .page-content-wrapper {
@@ -203,9 +239,6 @@ h1, h2, h3 {
         }
       }
       .hot {
-        h2 {
-          text-transform: uppercase;
-        }
         .item {
           border: 1px solid grey;
           padding: 5px;
@@ -256,36 +289,6 @@ h1, h2, h3 {
           }
         }
       }
-      .newsletter {
-        margin-top: 2em;
-        margin-bottom: 100px;
-        .col-md-5 {
-          padding: 0;
-        }
-        .col-md-7 {
-          padding: 0;
-        }
-        .discover {
-          background-image: url(/img/patroon.jpg);
-          padding: 2em 9em .5em 9em;
-          text-align: center;
-          height: 184px;
-          h2 {
-            margin-bottom: 1em;
-          }
-        }
-        .subscribe {
-          background: #5f5f5f;
-          padding: 2em 7em;
-          height: 184px;
-          input.submit {
-            color: white;
-            background-color: black;
-            border: solid black;
-
-          }
-        }
-      }
     }
     .product-detail {
       .logo {
@@ -295,6 +298,7 @@ h1, h2, h3 {
         background-position: 50%;
       }
       .info {
+        margin-bottom: 2em;
         .images {
           .big {
             height: 300px;
@@ -304,21 +308,22 @@ h1, h2, h3 {
           }
           .thumb {
             height: 150px;
-            background-size:cover;
+            background-size: cover;
             background-position: 50%;
             background-repeat: no-repeat;
             border: 5px solid #535353;
           }
         }
         .text {
-          height:450px;
+          height: 450px;
           .breadcrumbs {
+            margin-bottom: 1em;
             .logo {
               background-image: url('/img/k.png');
               height: 1.5em;
               width: 1.5em;
-              background-size:cover;
-              background-repeat:no-repeat;
+              background-size: cover;
+              background-repeat: no-repeat;
               float: left;
               margin-right: .8em;
             }
@@ -329,8 +334,22 @@ h1, h2, h3 {
             }
           }
           h2 {
-            text-transform: uppercase;
+            margin-bottom: .5em;
           }
+        }
+      }
+      .specs {
+        margin-bottom: 2em;
+        .text {
+          border: 3px solid #535353;
+          padding: 1em 2em;
+        }
+      }
+      .faq {
+        .question {
+          background-color: #717171;
+          padding: 1em;
+          margin-bottom: 1em;
         }
       }
     }
@@ -384,6 +403,23 @@ h1, h2, h3 {
         padding-top: 1em;
       }
       &.animal {
+        &:hover {
+          .dog {
+            background-image: url('/img/dog-w.png');
+          }
+          .cat {
+            background-image: url('/img/cat-w.png');
+          }
+          .bird {
+            background-image: url('/img/bird-w.png');
+          }
+          .fish {
+            background-image: url('/img/fish-w.png');
+          }
+          .hamster {
+            background-image: url('/img/hamster-w.png');
+          }
+        }
         span {
           color: white;
           font-weight: bold;
