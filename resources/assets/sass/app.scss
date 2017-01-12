@@ -405,19 +405,19 @@ h1, h2, h3 {
       &.animal {
         &:hover {
           .dog {
-            background-image: url('/img/dog-w.png');
+            background-image: url('/img/dog.png');
           }
           .cat {
-            background-image: url('/img/cat-w.png');
+            background-image: url('/img/cat.png');
           }
           .bird {
-            background-image: url('/img/bird-w.png');
+            background-image: url('/img/bird.png');
           }
           .fish {
-            background-image: url('/img/fish-w.png');
+            background-image: url('/img/fish.png');
           }
           .hamster {
-            background-image: url('/img/hamster-w.png');
+            background-image: url('/img/hamster.png');
           }
         }
         span {
@@ -447,19 +447,19 @@ h1, h2, h3 {
           background-image: url('/img/faq.png');
         }
         &.dog {
-          background-image: url('/img/dog.png');
+          background-image: url('/img/dog-w.png');
         }
         &.cat {
-          background-image: url('/img/cat.png');
+          background-image: url('/img/cat-w.png');
         }
         &.bird {
-          background-image: url('/img/bird.png');
+          background-image: url('/img/bird-w.png');
         }
         &.fish {
-          background-image: url('/img/fish.png');
+          background-image: url('/img/fish-w.png');
         }
         &.hamster {
-          background-image: url('/img/hamster.png');
+          background-image: url('/img/hamster-w.png');
         }
       }
     }

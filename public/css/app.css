@@ -7362,23 +7362,23 @@ h1, h2, h3 {
 }
 
 .sidebar .side-nav li.animal:hover .dog {
-  background-image: url("/img/dog-w.png");
+  background-image: url("/img/dog.png");
 }
 
 .sidebar .side-nav li.animal:hover .cat {
-  background-image: url("/img/cat-w.png");
+  background-image: url("/img/cat.png");
 }
 
 .sidebar .side-nav li.animal:hover .bird {
-  background-image: url("/img/bird-w.png");
+  background-image: url("/img/bird.png");
 }
 
 .sidebar .side-nav li.animal:hover .fish {
-  background-image: url("/img/fish-w.png");
+  background-image: url("/img/fish.png");
 }
 
 .sidebar .side-nav li.animal:hover .hamster {
-  background-image: url("/img/hamster-w.png");
+  background-image: url("/img/hamster.png");
 }
 
 .sidebar .side-nav li.animal span {
@@ -7414,23 +7414,23 @@ h1, h2, h3 {
 }
 
 .sidebar .side-nav li div.dog {
-  background-image: url("/img/dog.png");
+  background-image: url("/img/dog-w.png");
 }
 
 .sidebar .side-nav li div.cat {
-  background-image: url("/img/cat.png");
+  background-image: url("/img/cat-w.png");
 }
 
 .sidebar .side-nav li div.bird {
-  background-image: url("/img/bird.png");
+  background-image: url("/img/bird-w.png");
 }
 
 .sidebar .side-nav li div.fish {
-  background-image: url("/img/fish.png");
+  background-image: url("/img/fish-w.png");
 }
 
 .sidebar .side-nav li div.hamster {
-  background-image: url("/img/hamster.png");
+  background-image: url("/img/hamster-w.png");
 }
 
 /*# sourceMappingURL=app.css.map */
