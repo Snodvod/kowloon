@@ -6975,6 +6975,10 @@ h1, h2, h3 {
   width: 100%;
 }
 
+.page-content-wrapper .container .contact .btn {
+  background-color: pink;
+}
+
 .page-content-wrapper .container .slider {
   padding: 0;
 }
@@ -7503,6 +7507,11 @@ h1, h2, h3 {
 
 .sidebar .side-nav li div.faq {
   background-image: url("/img/faq.png");
+}
+
+.sidebar .side-nav li div.about {
+  background-image: url("/img/mail.svg");
+  background-size: 25px;
 }
 
 .sidebar .side-nav li div.dog {

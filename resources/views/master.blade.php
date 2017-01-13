@@ -11,7 +11,8 @@
     <ul class="side-nav">
         <li><div id="js-toggle-menu" class="menu"></div></li>
         <li id="js-open-search" class="top"><div class="search"></div><span>Search</span></li>
-        <li id="js-open-faq" class="top divider-top"><div class="faq"></div><span>FAQ</span></li>
+        <li id="js-open-faq" class="top"><div class="faq"></div><span>FAQ</span></li>
+        <li class="top divider-top"><a href="/about"><div class="about"></div><span>About us</span></a></li>
         <li class="{{ Helpers::isActiveRoute('dogs') }} animal divider-bot"><a href="/categories/1"><div class="dog"></div><span>Dogs</span></a></li>
         <li class="{{ Helpers::isActiveRoute('cats') }} animal"><a href="/categories/2"><div class="cat"></div><span>Cats</span></a></li>
         <li class="{{ Helpers::isActiveRoute('fish') }} animal"><a href="/categories/3"><div class="fish"></div><span>Fish</span></a></li>

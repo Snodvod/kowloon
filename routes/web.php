@@ -24,6 +24,8 @@ Route::post('/categories/{id}/filter', 'CategoryController@filter');
 
 
 Route::post('user/newsletter', 'UserController@newsletter');
+Route::get('/about', 'HomeController@about');
+Route::post('/contact', 'HomeController@contact');
 
 Route::get('search', 'SearchController@searchIndex');
 
