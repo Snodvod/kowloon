@@ -17,7 +17,6 @@ class CreateFaqsTable extends Migration
             $table->increments('id');
             $table->string('question');
             $table->text('answer');
-            $table->integer('product_id');
             $table->timestamps();
         });
     }

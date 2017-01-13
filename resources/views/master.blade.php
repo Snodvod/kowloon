@@ -4,12 +4,7 @@
     <meta charset="UTF-8">
     <title>Kowloon</title>
     <link rel="stylesheet" href="{{asset('css/app.css')}}">
-    <script src="{{asset('js/app.js')}}"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.css">
-    <script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
-
-    <script src="https://use.fontawesome.com/cbad98e1c7.js"></script>
 </head>
 <body>
 <div class="sidebar">
@@ -17,11 +12,11 @@
         <li><div id="js-toggle-menu" class="menu"></div></li>
         <li id="js-open-search" class="top"><div class="search"></div><span>Search</span></li>
         <li id="js-open-faq" class="top divider-top"><div class="faq"></div><span>FAQ</span></li>
-        <li class="animal divider-bot"><div class="dog"></div><span>Dogs</span></li>
-        <li class="animal"><div class="cat"></div><span>Cats</span></li>
-        <li class="animal"><div class="fish"></div><span>Fish</span></li>
-        <li class="animal"><div class="bird"></div><span>Birds</span></li>
-        <li class="animal"><div class="hamster"></div><span>Small Animals</span></li>
+        <li class="{{ Helpers::isActiveRoute('dogs') }} animal divider-bot"><a href="/categories/1"><div class="dog"></div><span>Dogs</span></a></li>
+        <li class="{{ Helpers::isActiveRoute('cats') }} animal"><a href="/categories/2"><div class="cat"></div><span>Cats</span></a></li>
+        <li class="{{ Helpers::isActiveRoute('fish') }} animal"><a href="/categories/3"><div class="fish"></div><span>Fish</span></a></li>
+        <li class="{{ Helpers::isActiveRoute('birds') }} animal"><a href="/categories/4"><div class="bird"></div><span>Birds</span></a></li>
+        <li class="{{ Helpers::isActiveRoute('small') }} animal"><a href="/categories/5"><div class="hamster"></div><span>Small Animals</span></a></li>
     </ul>
     <a href="/" class="kowloon"></a>
 </div>
@@ -56,11 +51,11 @@
                             </div>
                             <div class="col-md-5 price">
                                 <h5>Price range</h5>
-                                <div class="slider" id="js-slider"></div>
+                                <div class="slider js-slider"></div>
                                 <div class="row">
-                                    <div class="col-md-4 min"><span class="euro">€</span> <span id="js-min">1</span></div>
+                                    <div class="col-md-4 min"><span class="euro">€</span> <span class="js-min">1</span></div>
                                     <div class="col-md-4 text-xs-center">-</div>
-                                    <div class="col-md-4 max"><span class="euro">€</span> <span id="js-max">9999</span>
+                                    <div class="col-md-4 max"><span class="euro">€</span> <span class="js-max">9999</span>
                                     </div>
                                 </div>
 
@@ -124,4 +119,9 @@
 </div>
 
 </body>
+<script src="{{asset('js/app.js')}}"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="https://use.fontawesome.com/cbad98e1c7.js"></script>
+
 </html>

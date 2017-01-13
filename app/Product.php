@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\DB;
 
 class Product extends Model
 {
-    protected $fillable = ['name', 'price', 'hot', 'hot_order'];
+    protected $fillable = ['name', 'price', 'hot', 'hot_order', 'description', 'category_id'];
 
     public function category()
     {
@@ -21,7 +21,7 @@ class Product extends Model
 
     public function faqs()
     {
-        return $this->hasMany('App\Tag');
+        return $this->belongsToMany('App\Faq');
     }
 
     public function images()

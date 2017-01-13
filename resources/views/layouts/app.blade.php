@@ -4,13 +4,14 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <meta name="_token" content="{{ csrf_token() }}">
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <title>{{ config('app.name', 'Kowloon Admin') }}</title>
 
     <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.13/datatables.min.css"/>
     <link href="/css/app.css" rel="stylesheet">
 
     <!-- Scripts -->
@@ -21,53 +22,43 @@
     </script>
 </head>
 <body>
-    <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
-            <div class="container">
-                <div class="navbar-header">
-
-                    <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
-                        {{ config('app.name', 'Laravel') }}
-                    </a>
-                </div>
-
-                <div class="navbar-right navbar" id="app-navbar-collapse">
-                    <!-- Left Side Of Navbar -->
-
-                    <!-- Right Side Of Navbar -->
-                    <ul class="nav navbar-nav">
-                        <!-- Authentication Links -->
-                        @if (Auth::guest())
-                            <li><a href="{{ url('/login') }}">Login</a></li>
-                            <li><a href="{{ url('/register') }}">Register</a></li>
-                        @else
-                            <li class="">
-
-                                <ul class="" role="menu">
-                                    <li>
-                                        <a href="{{ url('/logout') }}"
-                                            onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                            Logout
-                                        </a>
-
-                                        <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
-                                            {{ csrf_field() }}
-                                        </form>
-                                    </li>
-                                </ul>
-                            </li>
-                        @endif
-                    </ul>
-                </div>
+<div id="app" class="admin">
+    <nav class="navbar">
+        <div class="navbar-inner">
+            <div class="navbar-brand">
+                <h1>Admin panel</h1>
             </div>
-        </nav>
-
+            <div class="pull-right">
+                <ul class="navbar-nav">
+                    <li class="{{ Helpers::areActiveRoutes(['products.index', 'products.edit']) }} nav-item"><a href="/admin/products">Products</a>
+                    </li>
+                    <li class="{{ Helpers::areActiveRoutes(['faqs.index', 'faqs.edit']) }} nav-item"><a href="/admin/faqs">FAQ</a></li>
+                    @if (!Auth::guest())
+                        <li class="nav-item">
+                            <a href="{{ url('/logout') }}"
+                               onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                Logout
+                            </a>
+                            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                                {{ csrf_field() }}
+                            </form>
+                        </li>
+                    @endif
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container admin">
         @yield('content')
     </div>
+</div>
 
-    <!-- Scripts -->
-    <script src="/js/app.js"></script>
+<!-- Scripts -->
+<script src="/js/app.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="https://use.fontawesome.com/cbad98e1c7.js"></script>
+<script src="http://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+
 </body>
 </html>

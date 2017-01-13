@@ -18,11 +18,14 @@ class CreateProductsTable extends Migration
             $table->string('name');
             $table->double('price');
             $table->text('description');
-            $table->integer('category_id');
+            $table->integer('category_id')->unsigned();
             $table->boolean('hot')->default(false);
             $table->integer('hot_order')->nullable();
             $table->timestamps();
+
+            $table->foreign('category_id')->references('id')->on('categories')->onDelete('cascade');
         });
+
     }
 
     /**
@@ -33,5 +36,6 @@ class CreateProductsTable extends Migration
     public function down()
     {
         Schema::dropIfExists('products');
+
     }
 }

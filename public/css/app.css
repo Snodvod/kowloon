@@ -6975,6 +6975,29 @@ h1, h2, h3 {
   width: 100%;
 }
 
+.page-content-wrapper .container .slider {
+  padding: 0;
+}
+
+.page-content-wrapper .container .slider .logo {
+  height: 75px;
+  background: url(/img/kowloon-logo.png) no-repeat;
+  background-position-x: 50%;
+  background-size: contain;
+  position: absolute;
+  top: 2em;
+  width: 100%;
+  z-index: 1;
+}
+
+.page-content-wrapper .container .slider .csslider {
+  width: 100%;
+}
+
+.page-content-wrapper .container .slider .csslider ul li {
+  background-size: cover !important;
+}
+
 .page-content-wrapper .container .overlay {
   display: none;
 }
@@ -7106,29 +7129,6 @@ h1, h2, h3 {
 
 .page-content-wrapper .container .index .cookie h2 {
   color: #e37e1e;
-}
-
-.page-content-wrapper .container .index .slider {
-  padding: 0;
-}
-
-.page-content-wrapper .container .index .slider .logo {
-  height: 75px;
-  background: url(/img/kowloon-logo.png) no-repeat;
-  background-position-x: 50%;
-  background-size: contain;
-  position: absolute;
-  top: 2em;
-  width: 100%;
-  z-index: 1;
-}
-
-.page-content-wrapper .container .index .slider .csslider {
-  width: 100%;
-}
-
-.page-content-wrapper .container .index .slider .csslider ul li {
-  background-size: cover !important;
 }
 
 .page-content-wrapper .container .index .info {
@@ -7300,6 +7300,98 @@ h1, h2, h3 {
   background-color: #717171;
   padding: 1em;
   margin-bottom: 1em;
+  cursor: pointer;
+}
+
+.page-content-wrapper .container .product-detail .faq .question h5 {
+  display: inline-block;
+}
+
+.page-content-wrapper .container .product-detail .faq .question .fa {
+  line-height: 31px;
+}
+
+.page-content-wrapper .container .product-detail .faq .question .answer {
+  display: none;
+  margin-bottom: 1em;
+}
+
+.page-content-wrapper .container .product-detail .related {
+  margin-bottom: 2em;
+}
+
+.page-content-wrapper .container .product-detail .related .image {
+  height: 150px;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+}
+
+.page-content-wrapper .container .category .breadcrumbs {
+  margin-bottom: 1em;
+}
+
+.page-content-wrapper .container .category .breadcrumbs .logo {
+  background-image: url("/img/k.png");
+  height: 1.5em;
+  width: 1.5em;
+  background-size: cover;
+  background-repeat: no-repeat;
+  float: left;
+  margin-right: .8em;
+}
+
+.page-content-wrapper .container .category .breadcrumbs .ribbon {
+  background-image: url("/img/tag.png");
+  padding: 0.2em 0.4em .2em 1em;
+  background-size: cover;
+}
+
+.page-content-wrapper .container .category .filters {
+  display: none;
+  margin-bottom: 2em;
+}
+
+.page-content-wrapper .container .category .filters .min, .page-content-wrapper .container .category .filters .max {
+  border: 1px solid black;
+  padding: .5em 1em;
+}
+
+.page-content-wrapper .container .category .filters .min .euro, .page-content-wrapper .container .category .filters .max .euro {
+  margin-right: 4em;
+}
+
+.page-content-wrapper .container .category .js-open-filters {
+  margin-bottom: 1em;
+}
+
+.page-content-wrapper .container .category .thumb {
+  height: 200px;
+  background-size: cover;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  border: 5px solid #535353;
+}
+
+.page-content-wrapper .container .category .thumb:hover .image-overlay {
+  opacity: 1;
+}
+
+.page-content-wrapper .container .category .thumb .image-overlay {
+  opacity: 0;
+  height: 100%;
+  background: -webkit-linear-gradient(rgba(255, 0, 67, 0.6), rgba(255, 0, 67, 0.6)), url(/img/info.png);
+  background: linear-gradient(rgba(255, 0, 67, 0.6), rgba(255, 0, 67, 0.6)), url(/img/info.png);
+  background-repeat: no-repeat;
+  background-position: 50%;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+}
+
+.page-content-wrapper .container .category .info {
+  background-color: #535353;
+  padding: 0 15px;
+  margin-bottom: 1em;
 }
 
 .sidebar {
@@ -7431,6 +7523,115 @@ h1, h2, h3 {
 
 .sidebar .side-nav li div.hamster {
   background-image: url("/img/hamster-w.png");
+}
+
+.admin .fa-trash-o {
+  cursor: pointer;
+}
+
+.admin .create {
+  margin: 1em 0;
+}
+
+.admin .hot {
+  margin: 2em -15px;
+}
+
+.admin .navbar {
+  background-color: #acacac;
+  border-radius: 0;
+  height: 100px;
+  padding: 0;
+  margin-bottom: 2em;
+}
+
+.admin .navbar .navbar-inner {
+  width: 1140px;
+  margin: 0 auto;
+}
+
+.admin .navbar .navbar-inner .navbar-brand {
+  padding: 0;
+  height: 100px;
+}
+
+.admin .navbar .navbar-inner .navbar-brand h1 {
+  padding: 0;
+  line-height: 100px;
+}
+
+.admin .navbar .navbar-inner ul {
+  list-style: none;
+  line-height: 100px;
+  font-size: 20px;
+  float: right;
+  margin: 0;
+}
+
+.admin .navbar .navbar-inner ul li {
+  padding: 0 1em;
+  margin: 0 !important;
+}
+
+.admin .navbar .navbar-inner ul li.active {
+  background: #f5f8fa;
+}
+
+.admin .navbar .navbar-inner ul li a {
+  color: black;
+}
+
+.admin table.products .price {
+  white-space: nowrap;
+}
+
+.admin table.products .category {
+  min-height: 100vh;
+  text-transform: capitalize;
+}
+
+.admin table.products .edit {
+  color: #373a3c;
+}
+
+.admin .edit .tags .tag-title, .admin .new .tags .tag-title {
+  font-size: 1rem;
+}
+
+.admin .edit .image-wrapper, .admin .new .image-wrapper {
+  border: 1px solid #ababab;
+  border-radius: 4px;
+}
+
+.admin .edit .categories, .admin .new .categories {
+  text-transform: capitalize;
+}
+
+.admin .edit .btn-primary, .admin .new .btn-primary {
+  margin-top: 75px;
+}
+
+.admin .edit h2, .admin .new h2 {
+  margin-bottom: 2em;
+}
+
+.admin .edit form input[type='file'], .admin .new form input[type='file'] {
+  color: transparent;
+}
+
+.admin .edit form .thumbs .col-md-4, .admin .new form .thumbs .col-md-4 {
+  margin-bottom: 1em;
+  padding: 0;
+  text-align: center;
+}
+
+.admin .edit form .thumbs .remove, .admin .new form .thumbs .remove {
+  cursor: pointer;
+}
+
+.admin .edit form .thumbs .thumb, .admin .new form .thumbs .thumb {
+  height: 100px;
+  margin-bottom: 1em;
 }
 
 /*# sourceMappingURL=app.css.map */

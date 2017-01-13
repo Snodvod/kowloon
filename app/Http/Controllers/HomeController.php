@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Category;
-use App\Faq;
 use App\Product;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Cookie;
@@ -20,6 +19,7 @@ class HomeController extends Controller
     {
         $cookie = $request->cookie('new');
         $new = false;
+        $categories = Category::All();
 
         $hotItems = Product::where('hot', true)->orderBy('hot_order', 'asc')->get();
 
@@ -28,7 +28,7 @@ class HomeController extends Controller
             $new = true;
             Cookie::queue('new', 'true', 999999);
         }
-        return view('index', ['new' => $new, 'hotItems' => $hotItems]);
+        return view('index', ['new' => $new, 'hotItems' => $hotItems, 'categories' => $categories]);
     }
 
 }

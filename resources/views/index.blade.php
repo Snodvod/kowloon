@@ -34,7 +34,7 @@
                     @foreach($categories as $category)
                         @if($category->id == 6)
                             <div class="col-md-2" style="border: none;">
-                                <a href="#">
+                                <a href="/categories/{{$category->id}}">
                                     <div class="cat{{$category->id}} animal"
                                          style="background-image: url({{asset('img/' . $category->image)}})"></div>
                                     <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
@@ -42,7 +42,7 @@
                             </div>
                         @else
                             <div class="col-md-2">
-                                <a href="">
+                                <a href="/categories/{{$category->id}}">
                                     <div class="cat{{$category->id}} animal"
                                          style="background-image: url({{asset('img/' . $category->image)}})"></div>
                                     <div class="cat{{$category->id}} text-xs-center">{{$category->name}}</div>
@@ -60,7 +60,7 @@
                         <div class="col-md-3">
                             <div class="item">
                                 <a href="/products/{{$item->id}}">
-                                    <div class="img" style="background-image: url({{asset('img/' . $item->images()->first()->image)}})">
+                                    <div class="img" style="background-image: url({{asset('storage/' . $item->images()->first()->image)}})">
                                         <div class="image-overlay"></div>
                                     </div>
                                     <div class="title">{{$item->name}}</div>

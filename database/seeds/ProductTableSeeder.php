@@ -21,6 +21,7 @@ class ProductTableSeeder extends Seeder
             'category_id' => 1
         ]);
         $product->tags()->attach(1);
+        $product->faqs()->attach(1);
         $product = \App\Product::create([
             'name' => 'Prestige snack',
             'price' => 1.99,
@@ -31,6 +32,8 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->tags()->attach(2);
         $product->tags()->attach(4);
+        $product->faqs()->attach(2);
+        $product->faqs()->attach(1);
         $product = \App\Product::create([
             'name' => 'Houten lamellenbal',
             'price' => 3.05,
@@ -40,6 +43,8 @@ class ProductTableSeeder extends Seeder
             'category_id' => 5
         ]);
         $product->tags()->attach(3);
+        $product->faqs()->attach(3);
+        $product->faqs()->attach(4);
         $product = \App\Product::create([
             'name' => 'Juwel Aquarium',
             'price' => 759.99,
@@ -50,6 +55,8 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->tags()->attach(1);
         $product->tags()->attach(2);
+        $product->faqs()->attach(6);
+        $product->faqs()->attach(10);
         $product = \App\Product::create([
             'name' => 'Coco husk',
             'price' => 2.19,
@@ -58,7 +65,7 @@ class ProductTableSeeder extends Seeder
         ]);
         $product->tags()->attach(2);
         $product->tags()->attach(5);
-
+        $product->faqs()->attach(15);
         $product = \App\Product::create([
             'name' => 'Poezentoyz',
             'price' => 69.07,
@@ -66,6 +73,7 @@ class ProductTableSeeder extends Seeder
             'category_id' => 2
         ]);
         $product->tags()->attach(4);
+        $product->faqs()->attach(16);
         $product = \App\Product::create([
             'name' => 'Poezentoyz3',
             'price' => 69.07,
@@ -73,6 +81,9 @@ class ProductTableSeeder extends Seeder
             'category_id' => 2
         ]);
         $product->tags()->attach(5);
+        $product->faqs()->attach(18);
+        $product->faqs()->attach(19);
+        $product->faqs()->attach(9);
         $product = \App\Product::create([
             'name' => 'Poezentoyz2',
             'price' => 69.07,
@@ -80,5 +91,7 @@ class ProductTableSeeder extends Seeder
             'category_id' => 2
         ]);
         $product->tags()->attach(4);
+        $product->faqs()->attach(11);
+        $product->faqs()->attach(14);
     }
 }

@@ -16,7 +16,6 @@ class FaqTableSeeder extends Seeder
             \App\Faq::create([
                 'question' => $faker->realText($maxNbChars = 40) . '?',
                 'answer' => $faker->realText($maxNbChars = 300),
-                'product_id' => rand(1,8)
             ]);
         }
     }

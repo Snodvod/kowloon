@@ -6,13 +6,15 @@ use Illuminate\Database\Eloquent\Model;
 
 class Faq extends Model
 {
+    protected $fillable = ['question', 'answer'];
+
     protected function search($query)
     {
         return self::where('question', 'LIKE', '%' . $query . '%')->get();
     }
 
-    public function product()
+    public function products()
     {
-        return $this->belongsTo('App\Product');
+        return $this->belongsToMany('App\Product');
     }
 }

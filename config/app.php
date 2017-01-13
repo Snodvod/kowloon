@@ -226,6 +226,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'Analytics' => Spatie\LaravelAnalytics\LaravelAnalyticsFacade::class,
+        'Helpers' => App\Helpers::class,
     ],
 
 ];
